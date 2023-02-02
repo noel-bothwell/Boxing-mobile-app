@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Assignment1</string>
+    <string name="window_text">Welcome to my Boxing Legends archive!</string>
+    <string name="EnterButton">Enter</string>
+</resources>
