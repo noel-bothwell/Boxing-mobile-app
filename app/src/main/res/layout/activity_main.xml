@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".main.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,8 +23,8 @@
 
     <Button
         android:id="@+id/EnterButton"
-        android:layout_width="102dp"
-        android:layout_height="31dp"
+        android:layout_width="134dp"
+        android:layout_height="48dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="188dp"
