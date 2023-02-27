@@ -1,5 +1,27 @@
 <resources>
-    <string name="app_name">Assignment1</string>
+    <string name="app_name">Boxing Archive</string>
     <string name="window_text">Welcome to my Boxing Legends archive!</string>
     <string name="EnterButton">Enter</string>
+    <string name="enterName">Enter Boxer Name</string>
+    <string name="weightClass">What weight class are they in?</string>
+    <string name="numWins">number of wins</string>
+    <string name="numlosses">number of losses</string>
+    <string name="isRetired">Have they retired?</string>
+    <string name="save">Save</string>
+    <string name="winStr">Wins</string>
+    <string name="goToList">Go to list</string>
+    <string name="archiveInstruction">Please fill in the following fields then press save</string>
+    <string name="listInstruction">Here you can see the list of boxers you entered. you can also delete or update them!</string>
+
+    <string-array name="weight_class">
+        <item>Heavy weight</item>
+        <item>Cruiser weight</item>
+        <item>Middle weight</item>
+        <item>Welter weight</item>
+        <item>Light weight</item>
+        <item>Feather weight</item>
+        <item>Bantam weight</item>
+        <item>Fly weight</item>
+        <item>Minimum weight</item>
+    </string-array>
 </resources>
