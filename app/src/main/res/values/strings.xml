@@ -5,8 +5,10 @@
     <string name="enterName">Enter Boxer Name</string>
     <string name="weightClass">What weight class are they in?</string>
     <string name="numWins">number of wins</string>
+    <string name="numlosses">number of losses</string>
     <string name="isRetired">Have they retired?</string>
     <string name="save">Save</string>
+    <string name="winStr">Wins</string>
     <string name="goToList">Go to list</string>
     <string name="archiveInstruction">Please fill in the following fields then press save</string>
     <string name="listInstruction">Here you can see the list of boxers you entered. you can also delete or update them!</string>
