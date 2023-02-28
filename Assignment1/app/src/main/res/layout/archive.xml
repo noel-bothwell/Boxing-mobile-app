@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/red"
+                    android:textAlignment="center"
+                    android:padding="10dp"
+                    android:hint="@string/archiveInstruction"
+                    android:textSize="10pt" />
+
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:hint="@string/enterName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/red"
+        android:inputType="text"
+        android:maxLength="25"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/numberWins"
+        android:hint="@string/numWins"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/red"
+        android:inputType="number"
+        android:maxLength="4"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/numberLosses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/red"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:hint="@string/numlosses" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:hint="@string/weightClass"
+                    android:background="@color/red"
+                    android:theme="@style/spinnerTheme"
+                    android:layout_height="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp" />
+
+                <CheckBox
+                    android:id="@+id/isRetired"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/red"
+                    android:hint="@string/isRetired"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:background="@color/red"
+                    android:textColor="@color/white"
+                    android:inputType="date" />
+
+                <Button
+                    android:id="@+id/Save"
+                    android:hint="@string/save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp" />
+
+                <Button
+                    android:id="@+id/goList"
+                    android:hint="@string/goToList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+
+            </LinearLayout>
+    </ScrollView>
+
+    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>

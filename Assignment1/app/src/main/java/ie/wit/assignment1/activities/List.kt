@@ -1,6 +1,5 @@
 package ie.wit.assignment1.activities
 
-
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -35,7 +34,7 @@ class List : AppCompatActivity() {
         binding.recyclerView.layoutManager = layoutManager
         binding.recyclerView.adapter = BoxerAdapter(app.boxerList)
 
-
+        var button = binding.searchBttn
 
     }
 
@@ -61,13 +60,15 @@ class BoxerAdapter constructor(private var boxers: List<BoxerArray1>) :
     class MainHolder(private val binding: CardBoxerBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(boxer: BoxerArray1, listener: List<BoxerArray1>) {
+        fun bind(boxer: BoxerArray1, boxers: List<BoxerArray1>) {
             binding.boxerName.text = boxer.name
             binding.weightClass.text = boxer.weightClass
             binding.NumWins.text =  boxer.numberWins.toString()
             binding.NumLoss.text = boxer.numberlosses.toString()
             binding.dateOfBirth.text = boxer.birthDate
-            binding.deleteButton.setOnClickListener({Listener.Delete(boxer)})
+            binding.deleteButton.setOnClickListener({
+
+            })
 
 
         }
