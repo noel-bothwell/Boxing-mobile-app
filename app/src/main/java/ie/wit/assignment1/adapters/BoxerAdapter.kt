@@ -44,6 +44,7 @@ class BoxerAdapter(private var boxers: List<BoxerArray1>,
             binding.NumWins.text =  boxer.numberWins.toString()
             binding.NumLoss.text = boxer.numberlosses.toString()
             binding.dateOfBirth.text = boxer.birthDate
+
             binding.deleteButton.setOnClickListener{(listener.onDelete(boxer))}
 
 

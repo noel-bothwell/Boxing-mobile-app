@@ -31,7 +31,7 @@ abstract class List : AppCompatActivity(), BoxerListener {
     }
 
     override fun onDelete(boxer: BoxerArray1) {
-
+    app.boxerList.delete(boxer)
     }
 }
 
