@@ -29,7 +29,7 @@
 
         </activity>
         <activity
-            android:name=".activities.List"
+            android:name=".activities.BoxerListing"
             android:exported="true">
 
         </activity>

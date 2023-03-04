@@ -65,7 +65,7 @@ class Archive  : AppCompatActivity() {
     }
 
     private fun openList(){
-        val intent = Intent(this, List::class.java)
+        val intent = Intent(this, BoxerListing::class.java)
         startActivity(intent)
 
     }
