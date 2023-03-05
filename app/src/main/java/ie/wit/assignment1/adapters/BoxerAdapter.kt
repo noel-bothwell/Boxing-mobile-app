@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ie.wit.assignment1.databinding.CardBoxerBinding
 import ie.wit.assignment1.models.BoxerArray1
-import ie.wit.assignment1.models.BoxerMemStore
 import kotlin.collections.List
 
 interface BoxerListener {
@@ -17,9 +16,9 @@ interface BoxerListener {
 
 
 
-class BoxerAdapter(private var boxers: List<BoxerArray1>,
-                   private val listener: BoxerListener) :
-    RecyclerView.Adapter<BoxerAdapter.MainHolder>() {
+class BoxerAdapter constructor (private var boxers: List<BoxerArray1>,
+                                private val listener: BoxerListener) :
+        RecyclerView.Adapter<BoxerAdapter.MainHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainHolder {
         val binding = CardBoxerBinding
@@ -45,6 +44,7 @@ class BoxerAdapter(private var boxers: List<BoxerArray1>,
             binding.NumLoss.text = boxer.numberlosses.toString()
             binding.dateOfBirth.text = boxer.birthDate
 
+            binding.root.setOnClickListener { listener.onBoxerClick(boxer) }
             binding.deleteButton.setOnClickListener{(listener.onDelete(boxer))}
 
 

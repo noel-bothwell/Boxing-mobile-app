@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_boxer"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -30,6 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:textSize="30sp"
+            android:textColor="@color/black"
             tools:text="Name" />
 
         <TextView
@@ -37,6 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/boxerName"
+            android:textColor="@color/black"
             tools:text="Date of Birth" />
 
         <TextView
@@ -47,6 +49,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="0dp"
             android:layout_toStartOf="@+id/colon"
+            android:textColor="@color/black"
             android:text="Number of wins" />
 
         <TextView
@@ -58,7 +61,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="0dp"
             android:layout_toStartOf="@+id/NumLoss"
-            android:text=":" />
+            android:textColor="@color/black"
+            android:text="wins:losses" />
 
         <TextView
             android:id="@+id/NumLoss"
@@ -68,6 +72,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
+            android:textColor="@color/black"
             android:text="Number of losses" />
 
         <TextView
@@ -78,6 +83,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginBottom="0dp"
             android:layout_toEndOf="@+id/dateOfBirth"
+            android:textColor="@color/black"
             android:text="Weight Class" />
 
 

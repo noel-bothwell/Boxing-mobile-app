@@ -12,6 +12,9 @@
     <string name="goToList">Go to list</string>
     <string name="archiveInstruction">Please fill in the following fields then press save</string>
     <string name="listInstruction">Here you can see the list of boxers you entered. you can also delete or update them!</string>
+    <string name="menu_addBoxer">Add</string>
+    <string name="menu_cancelBoxer">Cancel</string>
+    <string name="enter_boxer_name"> Please enter the Boxers Name </string>
 
     <string-array name="weight_class">
         <item>Heavy weight</item>

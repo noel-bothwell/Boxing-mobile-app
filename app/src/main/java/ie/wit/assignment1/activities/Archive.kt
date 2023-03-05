@@ -19,26 +19,53 @@ class Archive  : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ArchiveBinding.inflate(layoutInflater)
+        var edit = false
+
+
         val view = binding.root
 
         app = application as MainApp
 
         var button1 = binding.Save
 
+
+
+
+
         button1.setOnClickListener() {
             val boxername = binding.editTextTextPersonName.text.toString()
-            val wins = (binding.numberWins.text.toString()).toInt()
-            val losses = (binding.numberLosses.text.toString()).toInt()
+            val wins = binding.numberWins.text.toString().toInt()
+            val losses = binding.numberLosses.text.toString().toInt()
             val weightClass = binding.spinner.selectedItem.toString()
             val isRetired = binding.isRetired.isChecked
             val birthDate = binding.date.text.toString()
-            val boxer = BoxerArray1(0, boxername, wins, losses, weightClass, isRetired, birthDate)
-            app.boxerList.create(boxer)
+            var boxer = BoxerArray1(0, boxername, wins, losses, weightClass, isRetired, birthDate)
 
-            for (box in app.boxerList.findAll()){
-                println(box)
+
+            if (intent.hasExtra("boxer_edit")) {
+                var edit = true
+                boxer = intent.extras?.getParcelable("boxer_edit")!!
+                binding.editTextTextPersonName.setText(boxername)
+                binding.numberWins.setText(wins.toString())
+                binding.numberLosses.setText(losses.toString())
+                binding.spinner.setSelection((binding.spinner.adapter as ArrayAdapter<String>).getPosition(weightClass))
+                binding.isRetired.isChecked = isRetired
+                binding.date.setText(birthDate)
+                binding.Save.setText(R.string.save)
             }
+
+            if (intent.hasExtra("boxer_edit")) {
+                app.boxerList.update(boxer.copy())
+            } else {
+                app.boxerList.create(boxer)
+            }
+             for (box in app.boxerList.findAll()){
+                println(box)
+             }
         }
+
+
+
 
         var button = binding.goList
         button.setOnClickListener {
@@ -48,7 +75,6 @@ class Archive  : AppCompatActivity() {
 
 
         val spinner: Spinner = binding.spinner
-       // spinner.onItemSelectedListener = this
         // Creating an array adapter using the string array and a spinner layout
         ArrayAdapter.createFromResource(
             this,

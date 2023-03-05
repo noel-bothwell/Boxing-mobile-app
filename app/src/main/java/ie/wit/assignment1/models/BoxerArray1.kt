@@ -1,5 +1,10 @@
 package ie.wit.assignment1.models
 
+import android.net.Uri
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class BoxerArray1 (
     var id: Long = 0,
     var name: String = "",
@@ -8,5 +13,5 @@ data class BoxerArray1 (
     var weightClass: String ="" ,
     var isRetired: Boolean=true,
     var birthDate: String = ""
-    )
+    ) : Parcelable
 
