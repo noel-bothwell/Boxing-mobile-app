@@ -6,8 +6,12 @@
     <string name="weightClass">What weight class are they in?</string>
     <string name="numWins">number of wins</string>
     <string name="numlosses">number of losses</string>
-    <string name="isRetired">Have they retired?</string>
+    <string name="DOB">date of birth</string>
+    <string name="boxerImg">Add the Boxers photo</string>
+    <string name="select_boxer_image">Select Boxers photo</string>
+    <string name="changeimage">Change boxer photo</string>
     <string name="save">Save</string>
+    <string name="updateBoxer">Update</string>
     <string name="winStr">Wins</string>
     <string name="goToList">Go to list</string>
     <string name="archiveInstruction">Please fill in the following fields then press save</string>

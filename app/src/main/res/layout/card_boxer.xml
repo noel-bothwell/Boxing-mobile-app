@@ -6,13 +6,87 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dp"
-    android:background="@color/red"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="80dp"
+    android:layout_marginRight="80dp"
     android:elevation="24dp">
 
+
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="101dp"
+        android:layout_width="250dp"
+        android:layout_height="256dp"
+
         android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageIcon"
+            android:layout_width="79dp"
+            android:layout_height="78dp"
+            android:paddingTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/changeimage" />
+
+        <TextView
+            android:id="@+id/boxerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageIcon"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            tools:text="Name" />
+
+        <TextView
+            android:id="@+id/dateOfBirth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/boxerName"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            tools:text="Date of Birth" />
+
+        <TextView
+            android:id="@+id/weightClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dateOfBirth"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Weight Class"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/NumWins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weightClass"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@+id/colon"
+            android:text="Number of wins"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/colon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weightClass"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="wins:losses"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/NumLoss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weightClass"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/colon"
+            android:text="Number of losses"
+            android:textColor="@color/black" />
 
         <ImageButton
             android:id="@+id/deleteButton"
@@ -23,70 +97,6 @@
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="0dp"
             android:background="@drawable/delete_icon" />
-
-        <TextView
-            android:id="@+id/boxerName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:textSize="30sp"
-            android:textColor="@color/black"
-            tools:text="Name" />
-
-        <TextView
-            android:id="@+id/dateOfBirth"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/boxerName"
-            android:textColor="@color/black"
-            tools:text="Date of Birth" />
-
-        <TextView
-            android:id="@+id/NumWins"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="0dp"
-            android:layout_toStartOf="@+id/colon"
-            android:textColor="@color/black"
-            android:text="Number of wins" />
-
-        <TextView
-            android:id="@+id/colon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="0dp"
-            android:layout_toStartOf="@+id/NumLoss"
-            android:textColor="@color/black"
-            android:text="wins:losses" />
-
-        <TextView
-            android:id="@+id/NumLoss"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:textColor="@color/black"
-            android:text="Number of losses" />
-
-        <TextView
-            android:id="@+id/weightClass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/dateOfBirth"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="0dp"
-            android:layout_toEndOf="@+id/dateOfBirth"
-            android:textColor="@color/black"
-            android:text="Weight Class" />
-
-
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

@@ -25,19 +25,19 @@ class BoxerMemStore : BoxerStore {
     }
 
     override fun delete(boxer: BoxerArray1) {
-        var foundBoxer: BoxerArray1? = boxers.find { p -> p.id == boxer.id }
+        val foundBoxer: BoxerArray1? = boxers.find { p -> p.id == boxer.id }
         boxers.remove(foundBoxer)
     }
 
     override fun update(boxer: BoxerArray1) {
-        var foundBoxer: BoxerArray1? = boxers.find { p -> p.id == boxer.id }
+        val foundBoxer: BoxerArray1? = boxers.find { p -> p.id == boxer.id }
         if (foundBoxer != null) {
             foundBoxer.name = boxer.name
             foundBoxer.numberWins = boxer.numberWins
             foundBoxer.numberlosses = boxer.numberlosses
             foundBoxer.weightClass = boxer.weightClass
-            foundBoxer.isRetired = boxer.isRetired
             foundBoxer.birthDate = boxer.birthDate
+            foundBoxer.image = boxer.image
             logAll()
         }
     }

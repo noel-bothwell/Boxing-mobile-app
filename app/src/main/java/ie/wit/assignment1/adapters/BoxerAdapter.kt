@@ -5,6 +5,7 @@ package ie.wit.assignment1.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import ie.wit.assignment1.databinding.CardBoxerBinding
 import ie.wit.assignment1.models.BoxerArray1
 import kotlin.collections.List
@@ -43,7 +44,7 @@ class BoxerAdapter constructor (private var boxers: List<BoxerArray1>,
             binding.NumWins.text =  boxer.numberWins.toString()
             binding.NumLoss.text = boxer.numberlosses.toString()
             binding.dateOfBirth.text = boxer.birthDate
-
+            Picasso.get().load(boxer.image).resize(200,200).into(binding.imageIcon)
             binding.root.setOnClickListener { listener.onBoxerClick(boxer) }
             binding.deleteButton.setOnClickListener{(listener.onDelete(boxer))}
 

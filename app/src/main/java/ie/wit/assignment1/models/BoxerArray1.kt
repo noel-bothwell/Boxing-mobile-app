@@ -11,7 +11,7 @@ data class BoxerArray1 (
     var numberWins: Int =0,
     var numberlosses: Int =0,
     var weightClass: String ="" ,
-    var isRetired: Boolean=true,
-    var birthDate: String = ""
-    ) : Parcelable
+    var birthDate: String = "" ,
+    var image: Uri = Uri.EMPTY) : Parcelable
+
 
